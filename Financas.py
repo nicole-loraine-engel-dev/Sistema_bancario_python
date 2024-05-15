@@ -21,30 +21,26 @@ numero_saques = 0
 limite_saques = 3
 
 #O while se usa para quando irá repetir um bloco de código várias vezes
+#Função input() - usa-se para obter entrada do usuário através do terminal, exibe uma mensagem para o usuário, aguarda até que o usuário digite alguma informação e, em seguida, retorna essa entrada como uma string.
+#Se escolher a opção 1 - o valor é igual um nº decimal. Depois pergunta o valor
+#Se valor é maior que 0, saldo acrescenta valor e extrato pergunta valor do deposito (duas casas decimais em ponto flutuante)    senão printa a operação falhou! 
 
 while True:
-
-#Função input() - usa-se para obter entrada do usuário através do terminal, exibe uma mensagem para o usuário, aguarda até que o usuário digite alguma informação e, em seguida, retorna essa entrada como uma string.
-  
     opcao = input(menu)
 
-#Se escolher a opção 1 - o valor é igual um nº decimal. Depois pergunta o valor
-
-    if opcao == "1"
-        valor = float(imput("Informe o valor do depósito: "))
-
-#Se valor é maior que 0, saldo acrescenta valor e extrato pergunta valor do deposito (duas casas decimais em ponto flutuante)    senão printa a operação falhou!
+    if opcao == "1":
+        valor = float(input("Informe o valor do depósito:  "))
 
         if valor > 0:
             saldo += valor
-            extrato += f"depósito: R$ {valor:.2f}\n"
+            extrato += f"Depósito: R$ {valor:.2f}\n"
 
         else:
             print("Operação falhou! O valor informado é inválido.")   
 
 #Se escolher opção 2, o valor é um flutuante e pergunta o valor do saque
         
-    elif opcao == "2"
+    elif opcao == "2":
         valor = float(input("Informe o valor do saque"))
 
 #Excedeu saldo é valor maior que saldo, excedeu limite o valor maior que limite, excedeu saque o numero do saque é maior ou igual o limite de saques
@@ -79,16 +75,16 @@ while True:
 #IF Ternário: Permite escrever uma condição em uma única linha. Composto por três partes, a primeira parte é o retorno caso a expressão retorne verdadeiro, a segunda é a expressão lógica e a terceira é o retorno caso a expressão não seja atendida. 
 #if not extrato else extrato > Se o extrato não esta vazio, exibo o que esta dentro da variável de extrato. 
 
-    elif opcao" == "3":
+    elif opcao == "3":
         print("\n ................EXTRATO..................")
         print("Não foram realizadas movimentações." if not extrato else extrato)
         print("f\nSaldo: R$ {saldo:.2f}")
-        print("___________________________________________")
+        print("...........................................")
 
 #opção sair
 
-    elif opcao == "4"
+    elif opcao == "4":
         break
 
     else:
-        print(Operação inválida! Por favor, selecione novamente a opção desejada)
+        print("Operação inválida! Por favor, selecione novamente a opção desejada")
